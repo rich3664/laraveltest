@@ -12,9 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',[
+        'name' => 'Foo',
+        'greeting' => '안녕하세요?'
+
+    ]);
 });
 
-Route::get('/{foo}', function ($foo) {
-    return $foo;
-});
